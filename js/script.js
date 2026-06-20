@@ -1,12 +1,26 @@
+//setInterval - faz o controle de tempo
 const watchDocument = document.querySelector("#watch");
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
 let interval;
 
-function init() {
+function start() {
     watch();
     interval = setInterval(watch, 1000);
+}
+
+const pause = () => {
+    clearInterval(interval);
+}
+
+const digitZero = (digit) => {
+    if (digit < 10) {
+        return `0${digit}`;
+    }
+    else {
+        return digit;
+    }
 }
 
 function watch() {
@@ -20,5 +34,6 @@ function watch() {
         minutes = 0;
         hours++;
     }
-    watchDocument.innerHTML = hours + ":" + minutes + ":" + seconds;
+    watchDocument.innerHTML = 
+    digitZero(hours) + ":" + digitZero(minutes) + ":" + digitZero(seconds);
 }

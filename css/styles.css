@@ -21,7 +21,7 @@ button {
     border: 1px solid gray;
     cursor: pointer
 }
-.init-btn {
+.start-btn {
     background-color: chartreuse;
 }
 
@@ -30,6 +30,6 @@ button {
     color: aliceblue;
 }
 
-.stop-btn {
+.reset-btn {
     background-color: red;
 }
