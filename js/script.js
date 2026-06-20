@@ -7,11 +7,19 @@ let interval;
 
 function start() {
     watch();
-    interval = setInterval(watch, 1000);
+    interval = setInterval(watch, 3);
 }
 
 const pause = () => {
     clearInterval(interval);
+}
+
+const clearAll = () => {
+    clearInterval(interval);
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+    watchDocument.innerHTML = "00:00:00";
 }
 
 const digitZero = (digit) => {
